@@ -1,0 +1,84 @@
+1.What are the control sequences in Ada?  
+ control sequences are basic commands used for programming
+2. What are the programming units in Ada? 
+functional procedures and packages, generics
+3. What are the differences between a procedure and a function?
+ return statement, 
+4. What type of parameters can be defined in Ada? Can we define default parameter values?
+ in, out, inout.    
+5. How can we declare pointers? 
+ first you give base type, then you put type, name, is access, base type
+6. What is a block structure? When can be used? 
+begin-end. exception handling, modification of visibility and lifetime of exacptions, delayed reading variable declaration, big size data structure which has no need to stay in memory
+7. Why is called Ada as strongly typed language? 
+bla bla bla
+8. What is a package? What is the structure of a package?
+Interface to encapsulate data type and data operations. 
+you need ads, specification part, body part.
+9. What are the differences between a subtype and a new type?
+Subtype is generated subset of the base type, still being equivalent to base type.
+new type is new type.
+10. How can we define abstract data structures? 
+
+
+11. Why and where are generics used?
+Code reusabilit. whenever we need two or more types of same operations.
+
+12. What type of parameters can be used at generics? How can we instantiate generics? 
+elementary, discrete, composed, functors, objects.
+matching when instantiate.
+
+13. How can we define default operators? 
+  with function "<" (A, B: T) return Boolean;
+  -- with function "<" (A, B: T) return Boolean is <>;
+14. code snippets check at http://zsv.web.elte.hu/ada_files/questions.pdf
+first one - generic type parameter
+second one - simply belongs to the package
+
+15. How can we define records? What kind of records can be used? 
+
+
+16. Write examples of arrays and enumerate their attributes. 
+length, type conversion and such.. 
+
+17. What is a limited private type? 
+assigment not allowed
+equality not allowed
+
+18. Describe the exception handling in Ada. 
+Defined at the end of programming unit.
+activated at any error.
+you can write your exacptions and raise it.
+exception propagation. -> if unit does not have handling, it goes back to caller 
+
+19. How can we define parallel units in Ada?
+Using tasks. 
+we can define tasks with discriminants. 
+
+20. What is a protected unit in Ada?  
+Protects the distributed variable. 
+Main difference --- Protected is always there as long as the parent program is alive, while the task wouldn't do repetitive answering, unless entry point is not in a loop.
+
+21. How can we define a rendez-vous in Ada? 
+Meeting of callee and caller. 
+
+22. When are the tasks activated? When are the tasks terminated?  
+Static ones start with the main declaration part.
+Dynamics - when the pointer is created. 
+
+Parent task terminates when its children are finished
+Simple tasks are terminated when they finish, terminate, or abort.
+Task can be suicidal. (resources are not handeled properly.)
+
+
+23. Describe static and dynamic tasks.
+
+24. Describe the different select command types. 
+Caller -- immediate call, timed call, delay.
+Reciever -- select several branches seperated by or, or terminate, or delay, or delay until system clock. 
+
+
+
+25. What is a semaphore?
+Syncronization mechanicsme, to sync communication between tasks.
+Used to solve critical section.
